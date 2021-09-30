@@ -7,13 +7,14 @@ export default class ClickityClick extends React.Component {
         
         this.state = {
             hasBeenClicked: false,
+            currentTheme: 'blue'
         }
     }
 
     handleClick = () => {
         this.setState({
             hasBeenClicked: true
-        })
+        }, () => console.log(this.state.hasBeenClicked))
     }
 
     render() {
